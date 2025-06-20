@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/category.css';
 import Footer from "../components/Footer";
+
 const API_KEY = '20cb773b991a45e4854f68a115bea611';
 
 // Map your custom categories to NewsAPI valid ones
@@ -80,6 +81,7 @@ function CategoryPage() {
           handle: new URL(a.url).hostname,
           time: new Date(a.publishedAt).toLocaleDateString(),
           content: a.title,
+          url: a.url // ✅ Add actual article URL
         }));
 
         setPosts(articles);
@@ -124,11 +126,20 @@ function CategoryPage() {
             <p>{post.content}</p>
             <div className="post-footer">
               <span>{post.handle}</span>
+              {/* ✅ Read More link to actual article */}
+              <a
+                href={post.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="read-more"
+              >
+                Read More →
+              </a>
             </div>
           </div>
         ))}
       </div>
-      
+
       <Footer />
     </div>
   );

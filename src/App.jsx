@@ -4,8 +4,10 @@ import Loader from "./components/Loader";
 
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
-import Register from "./pages/Register"; // ✅ Import Register
+import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import PostPage from "./pages/PostPage";
+import CategoryPage from "./pages/CategoryPage"; // ✅ Import CategoryPage
 import Navbar from "./components/Navbar";
 import { getUser } from "./utils/auth";
 import "./App.css";
@@ -15,11 +17,9 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate app-level loading (e.g. fetching user/session data)
     const timeout = setTimeout(() => {
       setLoading(false);
     }, 1000);
-
     return () => clearTimeout(timeout);
   }, []);
 
@@ -32,8 +32,10 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login setUser={setUser} />} />
-            <Route path="/register" element={<Register />} /> {/* ✅ Register route */}
+            <Route path="/register" element={<Register />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/post/:id" element={<PostPage />} />
+            <Route path="/category/:categoryName" element={<CategoryPage />} /> {/* ✅ This is the fix */}
           </Routes>
         </>
       )}

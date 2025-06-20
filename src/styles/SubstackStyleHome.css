@@ -8,7 +8,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   color: grey;
-  
 }
 
 .substack-home {
@@ -62,12 +61,19 @@ body {
   overflow-x: auto;
   gap: 12px;
   margin: 16px 0;
-  padding: 10px 0;
-  scrollbar-width: none;
+  padding: 10px 16px;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: #666 transparent;
 }
 
 .category-tabs::-webkit-scrollbar {
-  display: none;
+  height: 6px;
+}
+
+.category-tabs::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 10px;
 }
 
 .category-tab {
@@ -79,6 +85,7 @@ body {
   cursor: pointer;
   font-size: 0.85rem;
   transition: background 0.3s;
+  flex-shrink: 0;
 }
 
 .category-tab:hover {
@@ -216,29 +223,6 @@ body {
     align-items: center;
   }
 
-  .category-tabs {
-    display: none;
-  }
-
-  .category-section.active .category-tabs {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: #1a1a1a;
-    padding: 10px;
-    border-radius: 0 0 10px 10px;
-    z-index: 10;
-  }
-
-  .category-tab {
-    margin: 5px 0;
-    width: 100%;
-    text-align: center;
-  }
-
   .scroll-container {
     flex-direction: column;
     align-items: center;
@@ -251,5 +235,20 @@ body {
 
   .cta-banner {
     margin: 20px;
+  }
+
+  /* Keep category-tabs visible and scrollable on small screens */
+  .category-tabs {
+    display: flex !important;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 16px;
+    margin: 12px 0;
+    background: transparent;
+  }
+
+  .category-tab {
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 }
