@@ -25,7 +25,7 @@ const Navbar = ({ user }) => {
   <h1>The Blog</h1>
 </div>
 
-      {/* Hamburger Menu}
+      
       <button className="hamburger-btn" onClick={toggleMenu}>
         ☰
       </button>
