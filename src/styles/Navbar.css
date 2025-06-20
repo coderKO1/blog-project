@@ -1,0 +1,169 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s, color 0.3s;
+  position: relative; /* For positioning the dropdown */
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 40px;
+}
+
+.nav-right,
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Buttons (Home, Logout) */
+.home-btn,
+.logout-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.home-btn {
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.home-btn:hover {
+  background-color: #444;
+}
+
+.logout-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background-color: #ff4444;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c33;
+}
+
+/* Welcome name */
+.user-name {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Navigation links (for non-logged in users) */
+.nav-links a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #2c2c2c;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Hamburger Menu */
+.hamburger-btn {
+  display: none; /* Hidden by default on large screens */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  padding: 5px;
+}
+
+.nav-right.open,
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  gap: 10px;
+  padding: 10px;
+}
+
+.nav-right.open .home-btn,
+.nav-right.open .logout-btn,
+.nav-links.open a {
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .nav-right,
+  .nav-links {
+    display: none; /* Hide by default on mobile */
+  }
+
+  .nav-right.open,
+  .nav-links.open {
+    display: flex; /* Show when open */
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .hamburger-btn {
+    align-self: end;
+    margin-top: -50px;
+  }
+}
+
+/* ✅ Black Home Button beside Logout */
+.black-btn {
+  background-color: #000;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.black-btn:hover {
+  background-color: #333;
+}

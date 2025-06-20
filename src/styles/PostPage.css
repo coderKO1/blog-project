@@ -1,0 +1,29 @@
+/* src/styles/PostPage.css */
+.post-detail-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+  
+  .post-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .post-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .post-body {
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+  

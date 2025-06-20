@@ -1,0 +1,255 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #f0f0f0;
+}
+
+/* Main Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  
+  background: #f8f9fa;
+  font-family: "Inter", sans-serif;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #37474f, #263238);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.sidebar ul li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.sidebar .logout-btn {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.sidebar .logout-btn:hover {
+  background-color: #c33;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px 20px;
+  background: linear-gradient(to right, #37474f, #263238);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  padding: 10px 16px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1; /* Take up remaining space */
+  
+  padding: 20px;
+  background-color: #fff; /* Ensure white background */
+  overflow-y: auto; /* Handle overflow if content exceeds height */
+}
+
+/* Add/Edit Post Form */
+.add-post-form {
+  background-color: #fff;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+}
+
+.add-post-form h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c2c2c;
+}
+
+.styled-input,
+.styled-textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.styled-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.file-input {
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.add-post-btn {
+  background-color: #2c403f;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.add-post-btn:hover {
+  background-color: #1e302f;
+}
+
+.cancel-edit-btn {
+  background-color: #999;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cancel-edit-btn:hover {
+  background-color: #777;
+}
+
+/* Blog Post Section */
+.posts-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.posts-section h2 {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  background: linear-gradient(to right, #37474f, #263238);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease-in-out;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.post-content h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: black;
+}
+
+.post-content p {
+  font-size: 14px;
+  color: white;
+  margin: 4px 0;
+  
+}
+
+.status-label {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+  margin-top: 4px;
+}
+
+.status-label.published {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-label.draft {
+  background-color: #f57c00;
+  color: white;
+}
+
+/* Image Preview */
+.image-preview {
+  max-width: 200px;
+  max-height: 200px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
