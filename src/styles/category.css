@@ -1,80 +1,80 @@
 .category-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    color: var(--text-color, #000000);
-  }
-  
-  .category-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .leaderboard {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-  }
-  
-  .leaderboard-item {
-    display: flex;
-    align-items: center;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid #444;
-  }
-  
-  .rank {
-    font-weight: bold;
-    margin-right: 1rem;
-    width: 20px;
-  }
-  
-  .avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 999px;
-    margin-right: 1rem;
-  }
-  
-  .info {
-    flex-grow: 1;
-  }
-  
-  .follow-btn {
-    background: transparent;
-    border: 1px solid #aaa;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .post-feed {
-    border-top: 2px solid #333;
-    padding-top: 1rem;
-  }
-  
-  .post-card {
-    background: #2c403f;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 0 4px rgba(0,0,0,0.2);
-  }
-  
-  .post-header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    color: grey
-  }
-  
-  .post-footer {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: white;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: var(--text-color, #000000);
+  overflow-x: hidden;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.leaderboard {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #444;
+}
+
+.rank {
+  font-weight: bold;
+  margin-right: 1rem;
+  width: 20px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  margin-right: 1rem;
+}
+
+.info {
+  flex-grow: 1;
+}
+
+.follow-btn {
+  background: transparent;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.post-feed {
+  border-top: 2px solid #333;
+  padding-top: 1rem;
+}
+
+.post-card {
+  background: #2c403f;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: grey;
+}
+
+.post-footer {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: white;
+}
