@@ -2,18 +2,17 @@
 import { useEffect } from 'react';
 import html2canvas from 'html2canvas';
 
-const KEYWORD = 'take screenshot'; // your voice command keyword
-
+const KEYWORD = 'take screenshot'; 
 function ScreenshotService() {
   useEffect(() => {
     const handleVoiceCommand = (event) => {
       const transcript = event.results[0][0].transcript.toLowerCase();
       if (transcript.includes(KEYWORD)) {
-        // Screenshot the entire page body
+        
         html2canvas(document.body).then(canvas => {
-          // you can do something with the canvas here
+          
           canvas.toBlob(blob => {
-            // For example, download the image:
+           
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
